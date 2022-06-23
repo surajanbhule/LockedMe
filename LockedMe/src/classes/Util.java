@@ -79,7 +79,7 @@ class Util {
 	}
    
 	public static void next() {
-		System.out.print("Press Any Key Then Enter to continue:");
+		System.out.print("Press Any Key Then Enter To Continue:");
 		new Scanner(System.in).next();
 	}
 }
