@@ -2,6 +2,8 @@ package classes;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 class FileHelper {
 	private File file;
@@ -44,4 +46,29 @@ class FileHelper {
 		
 	}
 	
+	public void deleteFile() {
+		System.out.println("Tip-> Dont provide extension to file");
+		String fileName=Util.input("Enter File Name:");
+		file=new File(FileManager.MainPath+"/"+fileName+".txt");
+		
+		 try {
+				if(Files.deleteIfExists(Paths.get(FileManager.MainPath+"/"+fileName+".txt"))) {
+					Util.printLine();
+					System.out.println("File Deleted Successfully");
+					Util.printLine();
+					Util.next();
+					Util.skipLines(2);
+				}
+				else {
+					Util.printLine();
+					System.out.println("No Such File Existed");
+					Util.printLine();
+					Util.next();
+					Util.skipLines(2);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
 }
