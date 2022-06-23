@@ -1,6 +1,10 @@
 package classes;
 
+import java.util.Scanner;
+
 class Util {
+	private static Scanner sc = new Scanner(System.in);
+	
 	public static void printLine() {
 		System.out.println("====================================================");
 	}
@@ -9,7 +13,7 @@ class Util {
 		animationEffect();
 		System.out.println("               Hi user good to see you,  please read \n instructions properly.");
 		animationEffect();
-		System.out.println("          ********** Application Info **********");
+		printHeading("Application Info");
 		System.out.println("       Project Name: Locked-Me");
 		System.out.println("     Developer Name: Suraj Anbhule");
 		animationEffect();
@@ -20,10 +24,10 @@ class Util {
 		System.out.println("Project Description:-");
 		
 		System.out.println("          This application allow you to create files \n and perform  basic operations on that file.");
-		printLine();
+		
 		animationEffect();
-		System.out.println("       ********** > How to use < **********");
-		printLine();
+		printHeading("How To Use");
+		
 		appGuide();
 		printLine();
 	}
@@ -50,4 +54,29 @@ class Util {
 			e.printStackTrace();
 		}
 	}
+
+	public static String input(String msg) {
+		System.out.print(msg+": ");
+		return sc.nextLine();
+	}
+	
+	public static void skipLines(int lines) {
+		for(int i=0;i<lines;i++)
+			System.out.println();
+	}
+	
+	public static void printHeading(String heading) {
+		printLine();
+		System.out.println("         ----------->> "+heading+" <<-----------");
+		printLine();
+	}
+	
+	public static void printMainMenu() {
+		System.out.println("Press 1.Display");
+		System.out.println("Press 2.File Menu");
+		System.out.println("Press 0.Exit");
+		printLine();
+	}
+
+
 }
