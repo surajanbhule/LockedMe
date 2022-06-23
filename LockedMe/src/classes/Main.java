@@ -28,7 +28,6 @@ public class Main {
 	private static void mainNavigation() {
 		while(true) {
 			Util.printHeading("Main Menu");
-			
 			Util.printMainMenu();
 			System.out.println("Select Main Menu Item");
 			switch(checkInputNumber()) {
@@ -53,8 +52,30 @@ public class Main {
 	}
 
 	private static void switchToFileMenu() {
-		// TODO Auto-generated method stub
-		System.out.println("File menu showing");
+		boolean fileMenuEnabled=true;
+		while(fileMenuEnabled) {
+			Util.printHeading("File Menu");
+			Util.printFileMenu();
+			System.out.println("Select Main Menu Item");
+			switch(checkInputNumber()) {
+				case 1:
+					System.out.println("Adding file");
+					break;
+				case 2:
+					System.out.println("Deleting file");
+					break;
+				case 3:
+					System.out.println("Deleting file");
+					break;
+				case 4:
+					fileMenuEnabled=false;
+					break;
+				default:
+					System.out.println("Invalid Input ... Please read instruction .. try again");
+					break;
+					
+			}
+		}
 	}
 
 	
