@@ -59,7 +59,7 @@ public class Main {
 			System.out.println("Select Main Menu Item");
 			switch(checkInputNumber()) {
 				case 1:
-					System.out.println("Adding file");
+					helper.addFile();
 					break;
 				case 2:
 					System.out.println("Deleting file");
