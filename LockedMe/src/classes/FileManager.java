@@ -5,6 +5,7 @@ import java.io.File;
 class FileManager {
 	public static String MainPath="D:/LockedMe/Main";
 	
+	
 	public static void setupAppFiles() {
 		if(createAppFolder())
 			System.out.println("App Files Created Successfully");

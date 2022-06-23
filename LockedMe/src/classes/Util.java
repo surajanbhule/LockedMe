@@ -68,6 +68,7 @@ class Util {
 	public static void printHeading(String heading) {
 		printLine();
 		System.out.println("         ----------->> "+heading+" <<-----------");
+		
 		printLine();
 	}
 	
@@ -81,5 +82,19 @@ class Util {
 	public static void next() {
 		System.out.print("Press Any Key Then Enter To Continue:");
 		new Scanner(System.in).next();
+	}
+
+	public static void printCurrentDirectory() {
+		System.out.println("Current Directory: >>> "+FileManager.MainPath);
+		printLine();
+	}
+
+	public static void printFileMenu() {
+		System.out.println("Press 1.Add File");
+		System.out.println("Press 2.Delete File");
+		System.out.println("Press 3.Search File");
+		System.out.println("Press 4.Main Menu");
+		printLine();
+		
 	}
 }
