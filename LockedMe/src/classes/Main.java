@@ -62,7 +62,7 @@ public class Main {
 					helper.addFile();
 					break;
 				case 2:
-					System.out.println("Deleting file");
+					helper.deleteFile();
 					break;
 				case 3:
 					System.out.println("Deleting file");
