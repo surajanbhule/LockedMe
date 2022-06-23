@@ -77,6 +77,9 @@ class Util {
 		System.out.println("Press 0.Exit");
 		printLine();
 	}
-
-
+   
+	public static void next() {
+		System.out.print("Press Any Key Then Enter to continue:");
+		new Scanner(System.in).next();
+	}
 }

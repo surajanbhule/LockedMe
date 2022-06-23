@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		helper=new FileHelper();
+		FileManager.setupAppFiles();
 		System.out.println(" ********** Welcome to the Locked-Me App **********");
 		Util.printLine();
 		Util.printAppInfo();
