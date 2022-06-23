@@ -23,7 +23,7 @@ class FileHelper {
 	
 	public void addFile() {
 		System.out.println("Tip-> Dont provide extension to file");
-		String fileName=Util.input("Enter File Name:");
+		String fileName=Util.input("Enter File Name");
 		file=new File(FileManager.MainPath+"/"+fileName+".txt");
 		try {
 			if(file.createNewFile()) {
@@ -48,7 +48,7 @@ class FileHelper {
 	
 	public void deleteFile() {
 		System.out.println("Tip-> Dont provide extension to file");
-		String fileName=Util.input("Enter File Name:");
+		String fileName=Util.input("Enter File Name");
 		file=new File(FileManager.MainPath+"/"+fileName+".txt");
 		
 		 try {
@@ -70,5 +70,27 @@ class FileHelper {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+	}
+	
+	public void searchFile() {
+		System.out.println("Tip-> Dont provide extension to file");
+		String fileName=Util.input("Enter File Name");
+		file=new File(FileManager.MainPath+"/"+fileName+".txt");
+		
+		 if(file.exists()) {
+			 Util.printLine();
+		    	System.out.println("Yes, File existed");
+		    	Util.printLine();
+		    	Util.next();
+		    	Util.skipLines(2);
+		    }
+		    else {
+		    	Util.printLine();
+		    	System.out.println("No Such File Exist");
+		    	Util.printLine();
+		    	Util.next();
+		    	Util.skipLines(2);
+		    	
+		    }
 	}
 }
