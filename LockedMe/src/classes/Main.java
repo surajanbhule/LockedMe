@@ -65,7 +65,7 @@ public class Main {
 					helper.deleteFile();
 					break;
 				case 3:
-					System.out.println("Deleting file");
+					helper.searchFile();
 					break;
 				case 4:
 					fileMenuEnabled=false;
